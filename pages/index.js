@@ -4,7 +4,7 @@ import { useState } from "react";
 export default function Home() {
   const [hidden, setHidden] = useState(true);
   return (
-    <div className=" relative lg:pb-20 w-screen overflow-x-hidden">
+    <div className="w-screen overflow-x-hidden">
       <Head>
         <title>Data visualization - Presentation</title>
       </Head>
@@ -16,7 +16,7 @@ export default function Home() {
           </div>
           <h1 className="text-4xl p-4">
             It would be better to open this web app on a laptop, desktop or any
-            larger. <br />
+            larger device. <br />
             <br />
             Proceed anyway?
           </h1>
@@ -33,9 +33,9 @@ export default function Home() {
       <div
         className={`${
           hidden ? "hidden" : "flex"
-        } lg:flex   flex-col  items-center text-slate-800 overflow-hidden`}
+        } lg:flex   flex-col  items-center text-slate-800 overflow-hidden px-1 lg:p-0`}
       >
-        <div className="lg:flex top-0 left-0 p-3 w-full lg:items-center lg:justify-between bg-slate-200  fixed">
+        <div className="lg:flex p-3 w-full lg:items-center lg:justify-between bg-slate-200  fixed">
           <div>
             <p className="text-2xl font-extrabold ">Data Visualization</p>
           </div>
@@ -45,7 +45,7 @@ export default function Home() {
             </p>
             <p className="font-bold text-2xl">Air Pollution</p>
           </div>
-          <div className=" font-medium">
+          <div className="font-medium">
             <h1>By: Ded-Fegens BAPTISTE (白風建)</h1>
           </div>
         </div>
@@ -62,13 +62,13 @@ export default function Home() {
             </p>
           </div>
         </div>
-        <div className="mt-40 ">
+        <div className="mt-40 h-screen">
           <h1 className="text-2xl text-center font-bold mb-1 bg-red-100 py-2">
             Outdoor air pollution is attributed to millions of deaths each year
           </h1>
           <p className="text-center mb-4">Dataset 1</p>
           <p>References: Haiti, Taiwan, China, USA</p>
-          <div className="w-[60rem] h-[40rem] flex flex-col items-center overflow-auto">
+          <div className="lg:w-[60rem]  w-full h-[40rem] flex flex-col items-center overflow-auto">
             <iframe
               src="https://ourworldindata.org/grapher/number-of-deaths-by-risk-factor?facet=none&country=~TWN"
               loading="lazy"
@@ -76,14 +76,14 @@ export default function Home() {
             ></iframe>
           </div>
         </div>
-        <div className="mt-40 ">
+        <div className="mt-40 h-screen">
           <h1 className="text-2xl text-center font-bold mb-1 bg-red-100 p-2">
             Death rates from ozone bad ozone(local ozone / bad ozone) and
             particulate matter pollution
           </h1>
           <p className="text-center mb-4">Dataset 2</p>
           <p>References: Haiti, Taiwan, China, USA</p>
-          <div className="w-[60rem] h-[40rem] flex flex-col items-center">
+          <div className="lg:w-[60rem]  w-full h-[40rem] ">
             <iframe
               src="https://ourworldindata.org/grapher/death-rates-from-air-pollution?country=~HTI"
               loading="lazy"
@@ -91,13 +91,13 @@ export default function Home() {
             ></iframe>
           </div>
         </div>
-        <div className="mt-40 ">
+        <div className="mt-40">
           <h1 className="text-2xl text-center font-bold mb-1 bg-red-100 py-2">
             The global distribution of deaths from outdoor air pollution
           </h1>
           <p className="text-center mb-4">Dataset 3</p>
-          <div className="w-screen px-8 h-[40rem] align-center flex-col lg:flex-row flex justify-between">
-            <div className="lg:w-1/2 w-full px-3">
+          <div className="w-screen lg:px-8  align-center gap-20 lg:gap-10 flex-col lg:flex-row flex justify-between">
+            <div className="lg:w-1/2  h-screen px-3">
               <p className="font-bold mb-2 text-center">
                 7.8% of global deaths are attributed to outdoor air pollution
               </p>
@@ -107,7 +107,7 @@ export default function Home() {
                 className="w-full h-full"
               ></iframe>
             </div>
-            <div className="lg:w-1/2 w-full px-3">
+            <div className="lg:w-1/2 w-full h-screen px-3">
               <p className="font-bold mb-2 text-center">
                 Death rates tend to be highest across middle-income countries
               </p>
@@ -119,19 +119,27 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="mt-40 ">
+        <div className="mt-40 h-screen">
           <h1 className="text-2xl text-center font-bold mb-1 bg-red-100 p-2">
             The long-term decline of air pollution in rich countries
           </h1>
           <p className="text-center mb-4">Dataset 4</p>
           <p>References: UK, USA</p>
-          <div className="w-[60rem] h-[40rem] flex flex-col items-center">
+          <div className="lg:w-[60rem]  w-full h-[40rem]">
             <iframe
               src="https://ourworldindata.org/grapher/emissions-of-air-pollutants?time=1970..2016&country=~GBR"
               loading="lazy"
               className="w-full h-full"
             ></iframe>
           </div>
+        </div>
+      </div>
+      <div className="bg-gray-700 h-20 w-screen ">
+        <div className="text-base flex-col mt-10 lg:flex-row flex justify-center items-center h-full text-slate-200">
+          <p>Reference: </p>
+          <a href="https://ourworldindata.org/outdoor-air-pollution">
+            https://ourworldindata.org/outdoor-air-pollution
+          </a>
         </div>
       </div>
     </div>
